@@ -37,6 +37,13 @@ a {
   margin: auto;
 }
 
+img[src='FullCircle.jpg'] {
+  margin-top: 0.2em;
+  height: 5.7em;
+  width: auto;
+  margin-left: 7.33px;
+}
+
 .subcontainer {
   width: 85%;
   margin: auto;
