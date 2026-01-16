@@ -9,7 +9,7 @@
 }
 body {
   position: relative;
-  height: 300vh;
+  height: 200vh;
   font-family: Roboto Condensed;
   background-color: var(--backgroundColor);
 }
