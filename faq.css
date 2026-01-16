@@ -32,6 +32,13 @@ a {
   text-decoration: none;
 }
 
+img[src='FullCircle.jpg'] {
+  margin-top: 0.2em;
+  height: 5.7em;
+  width: auto;
+  margin-left: 7.33px;
+}
+
 .container {
   width: 1600px;
   margin: auto;
