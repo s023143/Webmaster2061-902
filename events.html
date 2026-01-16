@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design 2061-901</title>
+  <link rel="icon" type="image/x-icon" href="/pictures/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="events.css" rel="stylesheet" type="text/css" />
+ 
+
+</head>
+
+<body>
+          <header style="z-index: 9999;">
+            <div class="container">
+              <div class="subcontainer">
+                <nav class="navbar">
+                  <a href="index.html"><img src="FullCircle.jpg" alt="Community Compass Logo"/></a>
+         
+         
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" style="color:#f2efe7;"class="nav-link">Home</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="resources.html"style="color: #f2efe7;" class="nav-link">Resources</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="events.html" style="color: #f2efe7;" class="nav-link">Events</a>
+            </li>
+        
+           
+            <li class="nav-item">
+              <a href="submit-resource.html"style="color: #f2efe7;" class="nav-link">Submit Resouces</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="faq.html"style="color: #f2efe7;" class="nav-link">FAQ</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="reference.html" style="color: #f2efe7;" class="nav-link">Reference Page</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+            <button id="theme-switch">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            
+        </button>
+    <div class="list-of-event-container">
+        <input id="searchbar"
+               onkeyup="search_event()"
+               type="text" name="search"
+               placeholder="Search events...">
+               <div class="filters">
+                   
+      <input type="date" id="dateFilter" />
+
+      <select id="typeFilter">
+        <option value="">All Types</option>
+        <option value="community">Community</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="fun">Fun</option>
+
+        
+      </select>
+        <label>
+            Start
+      <input type="time" id="startTime" min="07:00" max="18:00" step="1800" />
+      </label>
+      <label>
+          End
+      <input type="time" id="endTime" min="07:00" max="18:00" step="1800" />
+        </label>
+
+      <button id="clearFilters">Clear</button>
+    </div>
+   
+        <ul id='list'>
+            <div class="event-container">
+                <h3 class="year">2026</h3>
+                
+                <li class="event-list">
+                      <div class="event" data-type="volunteer" data-date="2026-01-19" data-time="11:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">19</div>
+                                <div class="month">Jan</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">MLK Day Volunteering</h3>
+                            <div class="event-description">
+                                Come out and support your community for an afternoon of service. We will be taking donations of non-perishable food items, toiletries, and any other supplies. There will be a variety of volunteer opportunities and food for all who participate!
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 11:30 am
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Food Pantry
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                <li class="event-list">
+                      <div class="event" data-type="community" data-date="2026-01-25" data-time="14:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">25</div>
+                                <div class="month">Jan</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Town Council Meeting</h3>
+                            <div class="event-description">
+                                Want to know the latest updates in our region? If so, come listen in on our city counsel meeting where we will go over new plans, policies, and more. There will be a designated time for public questions, and free entry to all. 
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 2:30 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Town Hall
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                
+                                    <li class="event-list">
+                      <div class="event" data-type="fun" data-date="2026-02-14" data-time="18:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">14</div>
+                                <div class="month">Feb</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Parents' Night Out</h3>
+                            <div class="event-description">
+                                Happy Valentine’s Day! Enjoy a night off for this special day and leave your kids with us to have a blast! We have many activities including crafts, games, movies and lots of snacks. Spots are limited so register early!
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 6:30 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Library
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                                                        <li class="event-list">
+                      <div class="event" data-type="community" data-date="2026-03-05" data-time="17:00">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">5</div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Cultural Potluck</h3>
+                            <div class="event-description">
+                                Take a spin around the world and experience different cultures through food at the town hall! As it is a potluck, we encourage everyone to bring a dish representing your culture to share with the community. Celebrate diversity!
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 5:00 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Church
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                    <li class="event-list">
+                      <div class="event" data-type="fun" data-date="2026-03-15" data-time="18:00">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">15</div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Game Night</h3>
+                            <div class="event-description">
+                                Ready to race in Mario Kart? Or slice in Boomerang Fu? Come join us in the library and battle it out with friends! Feel free to bring your own games as well! All ages are welcome.
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 6:00 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Library
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                                                            <li class="event-list">
+                      <div class="event" data-type="community" data-date="2026-03-17" data-time="12:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">17</div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">St. Patrick's Day Parade</h3>
+                            <div class="event-description">
+                                Happy St. Patrick’s day! Join us in our annual St. Patrick’s Day Parade and celebrate with our community. Show your Irish spirit, enjoy the atmosphere, and don’t forget to wear green!
+
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 12:30 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Downtown
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                                        <li class="event-list">
+                      <div class="event" data-type="community" data-date="2026-03-20" data-time="18:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">20</div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Block Party</h3>
+                            <div class="event-description">
+                                Attention Neighbors! Our annual block party is back! The entry fee is $10.00. There will be food, music, outdoor games, and so much more. Everyone is welcome to come out and have a good time. 
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 6:00 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Main Town Intersection
+  </div>
+</div>
+                        </div>
+                     </div>
+                    </li>
+                    
+                    <li class="event-list">
+                      <div class="event" data-type="fun" data-date="2026-03-31" data-time="12:00">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">31</div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Science Fair</h3>
+                            <div class="event-description">
+                                Come join us and experience the world of science through the cool projects/displays of our local middle school! Students will be at their designated project ready to explain, and fascinate you with their knowledge. Entry is free and all are welcomed! 
+
+
+
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 12:00 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Soccer Field
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                                        <li class="event-list">
+                      <div class="event" data-type="fun" data-date="2026-04-18" data-time="20:00">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">18</div>
+                                <div class="month">Apr</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Outdoor Movie Night</h3>
+                            <div class="event-description">
+                                Join us for a Community Outdoor Movie Night. Come enjoy a movie with friends and family under the stars at the soccer field. Snacks will be available for purchase so bring some cash! 
+
+
+
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 8:00 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Soccer Field
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                                                           <li class="event-list">
+                      <div class="event" data-type="fun" data-date="2026-05-02" data-time="12:30">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">2</div>
+                                <div class="month">May</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">Annual 5K Run</h3>
+                            <div class="event-description">
+                                Do you love running? Then come out for the Annual 5K run on May 2nd. Register and bring your friends and family! All donations and proceeds will go towards a good cause.
+
+
+
+                            </div>
+
+                        <div class="event-meta">
+  <div class="event-timing">
+    <img src="clock-icon.png" alt="" /> 12:30 pm
+  </div>
+
+  <div class="event-location">
+    <img src="location-icon.png" alt="" /> Town Square
+  </div>
+</div>
+
+
+                        </div>
+                     </div>
+                    </li>
+                    
+                    
+
+            </div>
+        </ul>
+    </div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>Email: info@communityhub.org</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Address: 123 Main Street, Your City</p>
+      <p>Office Hours: Mon–Fri, 9am–5pm</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <p>
+        <a href="resources.html">Resources</a> | 
+        <a href="submit-resource.html">Submit a Resource</a> | 
+        <a href="faq.html">FAQ</a>
+      </p>
+    </div>
+
+    <!-- Social + Newsletter -->
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p>
+        <a href="facebook.com">Facebook</a> | 
+        <a href="tiktok.com">TikTok</a> | 
+        <a href="instagram.com">Instagram</a>
+      </p>
+          </div>
+      <form class="newsletter-form">
+        <label for="email">Subscribe for Updates:</label><br>
+        <input type="email" id="email" placeholder="Enter email">
+        <button type="submit">Subscribe</button>
+      </form>
+
+  </div>
+
+  <!-- Bottom Note -->
+  <div class="footer-bottom">
+    <p>Team 2061-901</p>
+  </div>
+</footer>
+
+  <script src="events.js" defer></script>
+  <script src="darkmode.js" defer></script>
+  <script src="nav.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9be97202e99d6aff","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"642255d447fd46dbbcd67f3ff9dbdf59"}' crossorigin="anonymous"></script>
+</body>
+</html>
