@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Compass</title>
+    <meta name="description" content="Community Compass connects residents to local non-profits, support services, community events, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="shared.css" rel="stylesheet">
+    <link href="resources.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html"><img src="CommunityCompass.jpg" alt="Community Compass Logo"></a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link active">Resources</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="submit-resource.html" class="nav-link">Submit Resources</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="reference.html" class="nav-link">Reference Page</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header" id="top">
+            <div class="container">
+                <div class="section-label">Community Directory</div>
+                <div class="section-title">Community Resources</div>
+                <p class="section-sub">Search and filter resources available to all residents.</p>
+                <p class="section-sub">Note: User added resources take some time to load in.</p>
+            </div>
+        </div>
+
+        <div class="resource-directory">
+            <div class="container">
+                <!--Search and filter-->
+                <div class="search-filter-bar">
+                    <div class="search-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input id="searchbar" type="text" placeholder="Search resources, categories, keywords..." aria-label="Search resources">
+                    </div>
+                    <div class="filter-wrap">
+                        <select id="typeFilter" aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="food">Food</option>
+                            <option value="health">Health</option>
+                            <option value="housing">Housing</option>
+                            <option value="education">Education</option>
+                        </select>
+                        <button id="clearFilters" class="btn btn-outline btn-sm">Clear</button>
+                    </div>
+                </div>
+
+                <div class="results-bar">
+                    <span id="resultsCount" class="results-count"></span>
+                    <a href="submit-resource.html" class="btn btn-outline btn-sm">+ Add Resource</a>
+                </div>
+
+                <ul id="list">
+
+                    <li class="resource-list" data-type="emergency" data-search="emergency fire police hospital 911">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🚨</span><span class="res-cat">Emergency</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Fire, Hospital, Police</h3>
+                                <p class="resource-description">For any life threatening emergency involving fire, medical emergencies, or criminal activity</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-red">Emergency</span>
+                                    <span class="res-detail">📞 Dial 911</span>
+                                    <span class="res-detail">⏰ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="emergency" data-search="domestic violence hotline abuse 800">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🚨</span><span class="res-cat">Emergency</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Domestic Violence Hotline</h3>
+                                <p class="resource-description">Confidential support and crisis intervention for domestic violence survivors and their families.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-red">Emergency</span>
+                                    <span class="res-detail">📞 (800) 799-7233</span>
+                                    <span class="res-detail">⏰ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="emergency health" data-search="suicide mental health crisis 988">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🚨</span><span class="res-cat">Emergency</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Suicide & Crisis Lifeline</h3>
+                                <p class="resource-description">Free and confidential support for people in distress, prevention, and crisis resources.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-red">Emergency</span>
+                                    <span class="tag tag-purple">Mental Health</span>
+                                    <span class="res-detail">📞 Dial 988</span>
+                                    <span class="res-detail">⏰ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="food" data-search="food bank groceries families free">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🥫</span><span class="res-cat">Food</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Local Food Bank</h3>
+                                <p class="resource-description">Provides free groceries and household essentials to families in need. No income verification required for first visit.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-free">Free</span>
+                                    <span class="res-detail">📍 142 Elm St</span>
+                                    <span class="res-detail">⏰ Mon-Sat 9am-5pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="food" data-search="meals soup kitchen community free lunch dinner">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🥫</span><span class="res-cat">Food</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Community Meals & Soup Kitchens</h3>
+                                <p class="resource-description">Hot meals served daily by local organizations, open to all residents regardless of income level.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-free">Free</span>
+                                    <span class="res-detail">📍 Multiple Locations</span>
+                                    <span class="res-detail">⏰ Daily 12pm-2pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="food" data-search="SNAP food stamps federal assistance benefits">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🥫</span><span class="res-cat">Food</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">SNAP Benefits</h3>
+                                <p class="resource-description">Federal program providing monthly assistance to purchase food for low-income individuals and families.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-blue">Federal Program</span>
+                                    <span class="res-detail">📍 Apply <b><em><a href="https://www.pa.gov/agencies/dhs/resources/snap">online</a></em></b> or in person</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="food" data-search="community garden pantry produce fresh vegetables volunteer">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🥫</span><span class="res-cat">Food</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Community Gardens & Food Pantries</h3>
+                                <p class="resource-description">Grow or pick fresh produce locally. Volunteer-run pantries offer dry goods, canned items, and seasonal vegetables.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-free">Free</span>
+                                    <span class="res-detail">📍 River Park Garden</span>
+                                    <span class="res-detail">⏰ Sat 8am-12pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="health" data-search="clinic health free screening vaccination doctor">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🏥</span><span class="res-cat">Health</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Community Clinic & Free Health Screenings</h3>
+                                <p class="resource-description">Sliding scale primary care, dental, and routine health screenings including blood pressure, diabetes, and cholesterol.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-free">Sliding Scale</span>
+                                    <span class="res-detail">📍 221 Baker St</span>
+                                    <span class="res-detail">📞 (123) 456-7890</span>
+                                    <span class="res-detail">⏰ Sat 8am-12pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="health" data-search="mental health counseling therapy crisis hotline 24/7">
+                        <div class="resource">
+                            <div class="resource-left"><span class="res-emoji">🏥</span><span class="res-cat">Health</span></div>
+                            <div class="resource-right">
+                                <h3 class="resource-title">Mental Health Hotlines & Counseling</h3>
+                                <p class="resource-description">Confidential counseling, peer support, and crisis intervention. Tele-health options available for those without transportation.</p>
+                                <div class="resource-meta">
+                                    <span class="tag tag-purple">Mental Health</span>
+                                    <span class="res-detail">📞 (123) TALK-NOW</span>
+                                    <span class="res-detail">⏰ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="resource-list" data-type="health" data-search="gym recreation fitness exercise free low cost wellness">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">🏥</span><span class="res-cat">Health</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Local Gyms & Recreation Centers</h3>
+                            <p class="resource-description">Free or subsidized exercise programs, sports leagues, and wellness classes for children, adults, and seniors.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-free">Low Cost</span>
+                              <span class="res-detail">📍 Community Center</span>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                    
+                      <li class="resource-list" data-type="health" data-search="vaccination immunization flu shot preventive care">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">🏥</span><span class="res-cat">Health</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Vaccination & Preventative Care Center</h3>
+                            <p class="resource-description">Routine immunizations, flu shots, and preventive care services for all ages. Many services free with Medicaid or CHIP.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-free">Free/Low Cost</span>
+                              <span class="res-detail">📍 456 Swift Ln</span>
+                              <span class="res-detail">⏰ Tue & Thu 9am-4pm</span>
+                              <a href="register.html?event=Vaccination+%26+Preventative+Care+Center" class="btn btn-green btn-sm">Register</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="resource-list" data-type="housing emergency" data-search="homeless shelter transitional housing overnight emergency">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">🏠</span><span class="res-cat">Housing</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Emergency Shelter & Transitional Housing</h3>
+                            <p class="resource-description">Safe overnight housing for individuals and families experiencing homelessness, with case management and housing placement support.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-red">Emergency</span>
+                              <span class="res-detail">📞 (472) 459-4305</span>
+                              <span class="res-detail">⏰ 24/7 intake</span>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="resource-list" data-type="housing emergency" data-search="eviction prevention rental assistance legal housing">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">🏠</span><span class="res-cat">Housing</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Emergency Eviction Prevention Programs</h3>
+                            <p class="resource-description">Legal support, mediation, and financial assistance to help renters facing eviction</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-amber">Legal Aid</span>
+                              <span class="res-detail">📞 (505) 618-4757</span>
+                              <span class="res-detail">⏰ Mon-Fri 9am–5pm</span>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="resource-list" data-type="education" data-search="library tutoring study books programs free">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">📚</span><span class="res-cat">Education</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Public Library & Tutoring Programs</h3>
+                            <p class="resource-description">Free books, computers, Wi-Fi, ESL classes, GED prep, and tutoring assistance for all ages at no cost.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-free">Free</span>
+                              <span class="res-detail">📍 1 Library Square</span>
+                              <span class="res-detail">⏰ Mon–Sat 9am–8pm</span>
+                              <a href="register.html?event=Tutoring+Programs" class="btn btn-green btn-sm">Register</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+              
+                      <li class="resource-list" data-type="education" data-search="adult literacy GED high school equivalency reading math">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">📚</span><span class="res-cat">Education</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Adult Literacy & GED Classes</h3>
+                            <p class="resource-description">Free programs to improve reading, writing, and math skills and earn a high school equivalency diploma.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-free">Free</span>
+                              <span class="res-detail">📍 Library</span>
+                              <a href="register.html?event=Adult+Literacy+%26+GED+Classes" class="btn btn-green btn-sm">Register</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+              
+                      <li class="resource-list" data-type="education" data-search="after school youth kids teens homework enrichment">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">📚</span><span class="res-cat">Education</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">After School Programs for Youth</h3>
+                            <p class="resource-description">Safe, engaging activities for kids ages 5–17 including homework help, STEM clubs, art, and sports. Snacks provided.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-free">Free</span>
+                              <span class="res-detail">📍 Community Center</span>
+                              <span class="res-detail">⏰ Mon–Fri 3–6:30pm</span>
+                              <a href="register.html?event=After+School+Programs+for+Youth" class="btn btn-green btn-sm">Register</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+              
+                      <li class="resource-list" data-type="education" data-search="scholarship college prep financial aid higher education">
+                        <div class="resource">
+                          <div class="resource-left"><span class="res-emoji">📚</span><span class="res-cat">Education</span></div>
+                          <div class="resource-right">
+                            <h3 class="resource-title">Scholarships & College Prep Assistance</h3>
+                            <p class="resource-description">Guidance on finding scholarships, completing FAFSA, writing college essays, and preparing college applications.</p>
+                            <div class="resource-meta">
+                              <span class="tag tag-blue">Higher Education</span>
+                              <span class="res-detail">📞 (555) 100-5500</span>
+                              <a href="register.html?event=Scholarships+%26+College+Prep+Assistance" class="btn btn-green btn-sm">Register</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+              
+                </ul>
+
+                <div id="emptyState" style="display: none; text-align: center; padding: 60px 24px;">
+                    <div style="font-size: 3rem; margin-bottom: 12px;">🔎</div>
+                    <h3 style="margin-bottom: 8px;">No resources found</h3>
+                    <p>Try different keywords or <button onclick="clearAll()" style="background: none; border: none; color: var(--green); font-weight: 600; cursor: pointer; font-size: 1rem;">clear your filters</button></p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container text-center">
+          <div class="footer-container">
+              <div class="footer-column">
+                  <h3>Contact Us</h3>
+                  <p>Email: <a href="mailto:communitycompass@gmail.com">communitycompass@gmail.com</a></p>
+                  <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                  <p>123 Main Street, Philadelphia</p>
+                  <p>Office Hours: Mon–Fri, 9am–5pm</p>
+              </div>
+              <div class="footer-column">
+                  <h3>Quick Links</h3>
+                  <p><a href="resources.html">Resources</a></p>
+                  <p><a href="events.html">Events</a></p>
+                  <p><a href="submit-resource.html">Submit a Resource</a></p>
+                  <p><a href="faq.html">FAQ</a></p>
+                  <p><a href="reference.html">References</a></p>
+              </div>
+              <div class="footer-column">
+                  <h3>Stay Connected</h3>
+                  <p><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+                  <p><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></p>
+                  <p><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></p>
+                  <form class="newsletter-form" onsubmit="handleSubscribe(event, this)">
+                      <label for="sub-email">Subscribe for Updates:</label>
+                      <input type="email" id="sub-email" placeholder="Enter your email" required>
+                      <button type="submit">Subscribe</button>
+                      <span class="sub-confirm" style="display: none; color: white; font-size: 0.9rem;">You're subscribed!</span>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">Team 2061-902 - Community Compass</div>
+  </footer>
+    
+    <button id="theme-switch" aria-label="Toggle dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>
+    <button id="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+  </button>
+    
+    <script src="backtotop.js" defer></script>
+    <script src="resources1.js" defer></script>
+    <script src="darkmode.js" defer></script>
+    <script src="nav.js" defer></script>
+    </body>
+    </html>

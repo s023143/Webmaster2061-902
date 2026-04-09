@@ -1,0 +1,177 @@
+.page-header{
+    background: linear-gradient(135deg, var(--darker-green), var(--green));
+    padding: 48px 0 40px;
+}
+
+.page-header .section-label{
+    color: rgba(255,255,255,0.7);
+}
+
+.page-header .section-title{
+    color: white;
+}
+
+.page-header .section-sub{
+    color: rgba(255,255,255,0.8);
+}
+
+.ref-section{
+    padding: 56px 0 72px;
+}
+
+.ref-section .container{
+    max-width: 860px'
+}
+
+.ref-block{
+    background: white;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    padding: 32px 36px;
+    margin-bottom: 24px;
+}
+
+.darkmode .ref-block{
+    background: var(--dk-surface);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.ref-heading{
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--pale-green);
+}
+
+.darkmode .ref-heading{
+    color: var(--dk-text);
+    border-color: rgba(2, 131, 157, 0.2);
+}
+
+.ref-intro{
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    margin-bottom: 20px;
+}
+
+.darkmode .ref-intro{
+    color: var(--dk-text-mid);
+}
+
+.ref-intro a{
+    color: #d9622b;
+    text-decoration: underline;
+}
+
+.darkmode .ref-intro a{
+  color: var(--dk-green);
+}
+
+.doc-block{
+    border-left: 4px solid #d9622b;
+}
+
+.doc-links{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doc-link{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.doc-link:hover{
+    border-color: #d9622b;
+    background: #ffefe8;
+    transform: translateX(4px);
+}
+
+.darkmode .doc-link{
+    border-color: rgba(255,255,255,0.1);
+}
+
+.darkmode .doc-link:hover{
+    background: rgba(2, 131, 157, 0.08);
+}
+
+.doc-icon{
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.doc-link div{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.doc-link strong{
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.darkmode .doc-link strong{
+  color: var(--dk-text);
+}
+
+
+
+.doc-link span{
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.citation-list{
+  list-style: decimal;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.citation p{
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.darkmode .citation p{
+  color: var(--dk-text-mid);
+}
+
+.citation a{
+  color: #d9622b;
+  word-break: break-all;
+}
+
+.darkmode .citation a{
+  color: var(--dk-green);
+}
+
+.citation a:hover{
+  color: var(--green);
+}
+
+.citation em{
+  font-style: italic;
+}
+
+
+
+@media (max-width: 600px){
+  .ref-block{
+    padding: 24px 20px;
+  }
+}
+

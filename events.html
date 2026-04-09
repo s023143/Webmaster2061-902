@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events - Community Compass</title>
+    <meta name="description" content="Browse upcoming community events including volunteer opportunities, civic meetings, and fun activities for all ages.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="shared.css" rel="stylesheet">
+    <link href="events.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html"><img src="CommunityCompass.jpg" alt="Community Compass Logo"></a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+                    <li class="nav-item"><a href="submit-resource.html" class="nav-link">Submit Resources</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="reference.html" class="nav-link">Reference Page</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <div class="section-label">What's Happening</div>
+                <h1 class="section-title">Community Events</h1>
+                <p class="section-sub">Find volunteer opportunities, civic meetings, and fun activities happening near you.</p>
+                <p class="section-sub">Note: User added events take some time to load in.</p>
+            </div>
+        </div>
+
+        <div class="events-directory">
+            <div class="container">
+                <!--search and filters-->
+                <div class="search-filter-bar">
+                    <div class="search-wrap">
+                        <span class="search-icon">🔍</span>
+                        <input id="searchbar" type="text" placeholder="Search events by name, location, or keyword" aria-label="Search events">
+                    </div>
+                    <div class="filter-wrap">
+                        <select id="typeFilter" aria-label="Filter by type">
+                            <option value="">All Types</option>
+                            <option value="community">Community</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="fun">Fun</option>
+                            <option value="class">Class</option>
+                        </select>
+                        <input type="date" id="dateFilter" aria-label="Filter by date" title="Filter by date">
+                        <button id="clearFilters" class="btn btn-outline btn-sm">Clear</button>
+                    </div>
+                </div>
+
+                <div class="results-bar">
+                    <span id="resultsCount" class="results-count"></span>
+                </div>
+
+                <!--Event list-->
+                <ul id="list">
+                    <div class="event-container">
+                        <h3 class="year">2026</h3>
+
+                        <li class="event-list" data-type="class" data-date="2026-04-01" data-search="garden class workshop plants outside park beginner">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">01</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">How To: Garden</h3>
+                                        <span class="event-type-badge badge-class">Class</span>
+                                    </div>
+                                    <p class="event-description">Learn gardening basics with professionals to expand your horticultural knowledge! Make sure to bring clothes that can get dirty, gloves, and sunscreen!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 12:00 PM</span>
+                                        <span class="event-pill">📍 Park</span>
+                                        <span class="event-pill free-pill">$5/Person</span>
+                                        <a href="register.html?event=How+To:+Garden" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="volunteer" data-date="2026-04-05" data-search="park cleanup trash environment volunteer outdoor community">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">05</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Community Park Cleanup</h3>
+                                        <span class="event-type-badge badge-volunteer">Volunteer</span>
+                                    </div>
+                                    <p class="event-description">Help keep our neighborhood beautiful! Join us for a morning of picking up litter, pulling weeds, and sprucing up the park. Gloves and bags provided. All ages welcome!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 9:00 AM</span>
+                                        <span class="event-pill">📍 Cobbs Creek Park</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="class" data-date="2026-04-09" data-search="yoga exercise outdoor beginner instructors workout">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">09</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Outdoor Yoga</h3>
+                                        <span class="event-type-badge badge-class">Class</span>
+                                    </div>
+                                    <p class="event-description">Join us at the park and enjoy the warm weather with some yoga! Our gym instructors will be guiding you through, so don’t worry if you’re new to yoga! Bring a friend and wear workout clothes!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 4:00 PM</span>
+                                        <span class="event-pill">📍 Park</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="volunteer" data-date="2026-04-12" data-search="food pantry sort pack donate volunteer hunger">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">12</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Food Pantry Volunteering</h3>
+                                        <span class="event-type-badge badge-volunteer">Volunteer</span>
+                                    </div>
+                                    <p class="event-description">Help sort, pack, and distribute food to families in need at our local food pantry. No experience necessary — just a willingness to help! Shifts available throughout the day.</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 10:00 AM</span>
+                                        <span class="event-pill">📍 5301 Main Ave</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                        <a href="register.html?event=Food+Pantry+Volunteering" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="class" data-date="2026-04-13" data-search="bake baking cooking food workshop cafe">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">13</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">How To: Bake</h3>
+                                        <span class="event-type-badge badge-class">Class</span>
+                                    </div>
+                                    <p class="event-description">Learn the basics of baking and upgrade your skills with our very own cafe owners! Bring yourself and a friend, don't forget to RSVP!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 3:30 PM</span>
+                                        <span class="event-pill">📍 Food Pantry</span>
+                                        <span class="event-pill free-pill">$5/Person</span>
+                                        <a href="register.html?event=How+To:+Bake" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="community" data-date="2026-04-15" data-search="town council meeting policies government">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">15</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Town Council Meeting</h3>
+                                        <span class="event-type-badge badge-community">Community</span>
+                                    </div>
+                                    <p class="event-description">Stay informed on new plans, policies, and updates for our region. There will be a designated time for public questions. Free entry for all residents. Your voice matters!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 6:30 PM</span>
+                                        <span class="event-pill">📍 Town Hall</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="fun" data-date="2026-04-17" data-search="jeopardy trivia game night community center family">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">17</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Jeopardy Night</h3>
+                                        <span class="event-type-badge badge-fun">Fun</span>
+                                    </div>
+                                    <p class="event-description">Join us at the community center for a jeopardy night with your family! Food, snacks and drinks will be provided! Let's see who knows the most trivia!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 7:00 PM</span>
+                                        <span class="event-pill">📍 Community Center</span>
+                                        <span class="event-pill free-pill">$2/Person</span>
+                                        <a href="register.html?event=Jepordy+Night" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="community" data-date="2026-04-18" data-search="outdoor movie night stars soccer field snacks family">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">18</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Outdoor Movie Night</h3>
+                                        <span class="event-type-badge badge-community">Community</span>
+                                    </div>
+                                    <p class="event-description">Join us for a Community Outdoor Movie Night. Come enjoy a movie with friends and family under the stars at the soccer field. Snacks will be available for purchase so bring some cash!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 8:00 PM</span>
+                                        <span class="event-pill">📍 5800 Circle Ave</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="community" data-date="2026-04-22" data-search="earth day environment park trash saplings nature">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">22</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Earth Day</h3>
+                                        <span class="event-type-badge badge-community">Community</span>
+                                    </div>
+                                    <p class="event-description">Join us to pick up trash, exchange saplings and embrace the Earth! Let's preserve the Earth while we still can, and celebrate Earth Day!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 2:30 PM</span>
+                                        <span class="event-pill">📍 Park</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="volunteer" data-date="2026-04-26" data-search="senior center visit elderly companion volunteer care">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">26</div>
+                                        <div class="month">Apr</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Senior Center Companion Visit</h3>
+                                        <span class="event-type-badge badge-volunteer">Volunteer</span>
+                                    </div>
+                                    <p class="event-description">Spend an afternoon with seniors at the local community center. Play games, share stories, and bring some joy to those who need it most. Sign up in advance so we can plan activities!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 1:00 PM</span>
+                                        <span class="event-pill">📍 Community Center</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="fun" data-date="2026-05-03" data-search="scavenger hunt park plaza outdoor activity">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">3</div>
+                                        <div class="month">May</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Scavenger Hunt</h3>
+                                        <span class="event-type-badge badge-fun">Fun</span>
+                                    </div>
+                                    <p class="event-description">Head out to the park and plaza for a community scavenger hunt! A fun outdoor activity for all ages.</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 8:00 AM</span>
+                                        <span class="event-pill">📍 Park & Plaza</span>
+                                        <span class="event-pill free-pill">$4/Person</span>
+                                        <a href="register.html?event=Scavenger+Hunt" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="volunteer" data-date="2026-05-17" data-search="shelter donation drive clothing toiletries homeless volunteer">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">17</div>
+                                        <div class="month">May</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">Shelter Donation Drive</h3>
+                                        <span class="event-type-badge badge-volunteer">Volunteer</span>
+                                    </div>
+                                    <p class="event-description">Collecting clothing, toiletries, and household essentials for residents of our local emergency shelter. Drop off donations or volunteer to help sort and distribute items on site.</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 10:00 AM</span>
+                                        <span class="event-pill">📍 Town Hall</span>
+                                        <span class="event-pill free-pill">Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="event-list" data-type="fun" data-date="2026-06-14" data-search="bbq cookout summer food grill park outdoor">
+                            <div class="event">
+                                <div class="event-left">
+                                    <div class="event-date">
+                                        <div class="date">14</div>
+                                        <div class="month">Jun</div>
+                                    </div>
+                                </div>
+                                <div class="event-right">
+                                    <div class="event-top">
+                                        <h3 class="event-title">BBQ Cookout</h3>
+                                        <span class="event-type-badge badge-fun">Fun</span>
+                                    </div>
+                                    <p class="event-description">Happy summer! Come out and enjoy a delicious cookout to celebrate the start of summer. Register using the link below with a fee of $15 for your food. Hope to see you there!</p>
+                                    <div class="event-meta">
+                                        <span class="event-pill">🕑 5:30 PM</span>
+                                        <span class="event-pill">📍 Cobbs Creek Park</span>
+                                        <span class="event-pill free-pill">$15/Person</span>
+                                        <a href="register.html?event=BBQ+Cookout" class="btn btn-sm btn-outline">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+
+                    </div>
+                </ul>
+
+                <div id="emptyState" style="display: none; text-align: center; padding: 60px 24px;">
+                    <div style="font-size: 3rem; margin-bottom: 12px;">📅</div>
+                    <h3 style="margin-bottom: 8px;">No events found</h3>
+                    <p>Try different keywords or <button onclick="clearAll()" style="background: none; border: none; color: var(--green); font-weight: 600; cursor: pointer; font-size: 1rem;">clear your filters</button></p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:communitycompass@gmail.com">communitycompass@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                    <p>123 Main Street, Philadelphia</p>
+                    <p>Office Hours: Mon–Fri, 9am–5pm</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <p><a href="resources.html">Resources</a></p>
+                    <p><a href="events.html">Events</a></p>
+                    <p><a href="submit-resource.html">Submit a Resource</a></p>
+                    <p><a href="faq.html">FAQ</a></p>
+                    <p><a href="reference.html">References</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Stay Connected</h3>
+                    <p><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+                    <p><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></p>
+                    <p><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <label for="sub-email">Subscribe for Updates:</label>
+                        <input type="email" id="sub-email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">Team 2061-902 - Community Compass</div>
+    </footer>
+
+<button id="theme-switch" aria-label="Toggle dark mode">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+</button>
+<button id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+</button>
+
+<script src="backtotop.js" defer></script>
+<script src="events1.js" defer></script>
+<script src="darkmode.js" defer></script>
+<script src="nav.js" defer></script>
+</body>
+</html>

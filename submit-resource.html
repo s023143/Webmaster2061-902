@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Resource or Event - Community Compass</title>
+  <meta name="description" content="Submit a community resource or upcoming event to the Community Compass directory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="shared.css" rel="stylesheet">
+  <link href="submit-resource.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html"><img src="CommunityCompass.jpg" alt="Community Compass Logo"></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="submit-resource.html" class="nav-link active">Submit Resources</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="reference.html" class="nav-link">Reference Page</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="section-label">Help Us Grow</div>
+      <h1 class="section-title">Submit a Resource or Event</h1>
+      <p class="section-sub">Know something our community should know about? Submit it below and we'll review it for the directory.</p>
+    </div>
+  </div>
+
+  <div class="submit-wrapper">
+    <div class="container">
+      <!--progress indicator-->
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-step active" id="prog-0">
+          <div class="progress-dot">1</div>
+          <span>Choose Type</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="prog-1">
+          <div class="progress-dot">2</div>
+          <span>Your Info</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="prog-2">
+          <div class="progress-dot">3</div>
+          <span>Contact</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="prog-3">
+          <div class="progress-dot">4</div>
+          <span>Details</span>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="mainForm" novalidate>
+
+          <!--step 0: choose type-->
+          <div class="step active" data-step="0">
+            <h2>What would you like to submit?</h2>
+            <p class="step-sub">Select the type of submission to get started.</p>
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="formType" value="event" required>
+                <div class="choice-inner">
+                  <span class="choice-icon">📅</span>
+                  <strong>Event</strong>
+                  <p>A workshop, meeting, community gathering, or activity</p>
+                </div>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="formType" value="resource" required>
+                <div class="choice-inner">
+                  <span class="choice-icon">📋</span>
+                  <strong>Resource</strong>
+                  <p>A service, organization, program, or support opportunity</p>
+                </div>
+              </label>
+            </div>
+            <div class="step-actions">
+              <button type="button" id="continueBtn" class="btn btn-green">Next →</button>
+            </div>
+          </div>
+
+          <!--step 1: basic info (shared between event and resource)-->
+          <div class="step eventForm resourceForm" data-step="1">
+            <h2>Your Information</h2>
+            <p class="step-sub">Tell us a little about yourself so we can follow up if needed.</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span class="req">*</span></label>
+                <input type="text" id="firstName" placeholder="First name" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="req">*</span></label>
+                <input type="text" id="lastName" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline prev">← Back</button>
+              <button type="button" class="btn btn-green next">Next →</button>
+            </div>
+          </div>
+
+          <!--step 2: contact info (shared as well)-->
+          <div class="step eventForm resourceForm" data-step="2">
+            <h2>Contact Information</h2>
+            <p class="step-sub">We'll only use this to reach out about your submission.</p>
+            <div class="form-group">
+              <label for="emailAddr">Email Address <span class="req">*</span></label>
+              <input type="email" id="emailAddr" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNum">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phoneNum" placeholder="(555) 000-0000" pattern="[0-9]{10}" inputmode="numeric" title="10-digit phone number" required>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline prev">← Back</button>
+              <button type="button" class="btn btn-green next">Next →</button>
+            </div>
+          </div>
+
+          <!--step 3: event details-->
+          <div class="step eventForm" data-step="3">
+            <h2>Event Details</h2>
+            <p class="step-sub">Tell us about the event so we can add it to the calendar.</p>
+            <div class="form-group">
+              <label for="eventName">Event Name <span class="req">*</span></label>
+              <input type="text" id="eventName" placeholder="e.g., Community Cleanup Day" required>
+            </div>
+            <div class="form-group">
+              <label for="eventType">Type of Event <span class="req">*</span></label>
+              <select id="eventType" onchange="toggleOther(this, 'eventTypeOther')" required>
+                <option value="">Select a type…</option>
+                <option value="community">Community Gathering</option>
+                <option value="volunteer">Volunteer Opportunity</option>
+                <option value="workshop">Workshop or Class</option>
+                <option value="fun">Fun</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <input id="eventTypeOther" type="text" placeholder="Please describe the event type" style="display:none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="eventDate">Date <span class="req">*</span></label>
+                <input type="date" id="eventDate" required>
+              </div>
+              <div class="form-group">
+                <label for="eventTime">Start Time <span class="req">*</span></label>
+                <input type="time" id="eventTime" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="eventLocation">Location <span class="req">*</span></label>
+              <input type="text" id="eventLocation" placeholder="e.g., Town Hall, 100 Main St" required>
+            </div>
+            <div class="form-group">
+              <label for="eventAudience">Who Can Attend? <span class="req">*</span></label>
+              <select id="eventAudience" required>
+                <option value="">Select…</option>
+                <option>Children</option>
+                <option>Adults</option>
+                <option>All Ages</option>
+                <option>Seniors</option>
+                <option>Families</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="eventCost">Cost <span class="req">*</span></label>
+              <select id="eventCost" onchange="toggleOther(this, 'eventCostOther')" required>
+                <option value="">Select…</option>
+                <option value="Free">Free</option>
+                <option value="other">Other / specify amount</option>
+              </select>
+            </div>
+            <input id="eventCostOther" type="text" placeholder="e.g., $10/Person" style="display:none;">
+            <div class="form-group">
+              <label for="eventDetails">Description <span class="req">*</span></label>
+              <textarea id="eventDetails" placeholder="Describe the event — what's happening, what to bring, how to register…" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="eventRegister">Registration Required?</label>
+              <select id="eventRegister" required>
+                <option value ="" >Select...</option>
+                <option value="yes">Yes, add a Register button</option>
+                <option value="no">No, open to all</option>
+              </select>
+            </div>
+            <div class="step-actions">
+              <p>Note: Form takes a few seconds to submit</p>
+              <button type="button" class="btn btn-outline prev">← Back</button>
+              <button type="submit" class="btn btn-green">Submit Event</button>
+            </div>
+          </div>
+
+          <!--step 3: resource details-->
+          <div class="step resourceForm" data-step="3">
+            <h2>Resource Details</h2>
+            <p class="step-sub">Tell us about the resource or organization you're submitting.</p>
+            <div class="form-group">
+              <label for="resourceName">Organization / Resource Name <span class="req">*</span></label>
+              <input type="text" id="resourceName" placeholder="e.g., West Side Food Pantry" required>
+            </div>
+            <div class="form-group">
+              <label for="resourceType">Type of Resource <span class="req">*</span></label>
+              <select id="resourceType" onchange="toggleOther(this, 'resourceTypeOther')" required>
+                <option value="">Select a category…</option>
+                <option value="emergency">Emergency Services</option>
+                <option value="food">Food Assistance</option>
+                <option value="health">Health &amp; Wellness</option>
+                <option value="housing">Housing &amp; Shelter</option>
+                <option value="education">Education &amp; Youth</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <input id="resourceTypeOther" type="text" placeholder="Please describe the resource type" style="display:none;">
+            <div class="form-group">
+              <label for="resourceAddress">Address <span class="req">*</span></label>
+              <input type="text" id="resourceAddress" placeholder="Street address, city" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resourcePhone">Phone Number</label>
+                <input type="tel" id="resourcePhone" placeholder="(555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="resourceHours">Hours of Operation</label>
+                <input type="text" id="resourceHours" placeholder="e.g., Mon–Fri 9am–5pm">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hasApplication">Is there an application or intake process?</label>
+              <select id="hasApplication">
+                <option value="">Select…</option>
+                <option value="no">No - walk-in or open access</option>
+                <option value="yes">Yes - application or registration needed</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="resourceAudience">Who Does It Serve? <span class="req">*</span></label>
+              <select id="resourceAudience" onchange="toggleOther(this, 'audienceOther')" required>
+                <option value="">Select…</option>
+                <option>All Residents</option>
+                <option>Children &amp; Youth</option>
+                <option>Adults</option>
+                <option>Seniors</option>
+                <option>Families</option>
+                <option>Veterans</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <input id="audienceOther" type="text" placeholder="Please describe who it serves" style="display:none;">
+            <div class="form-group">
+              <label for="resourceDesc">Brief Description <span class="req">*</span></label>
+              <textarea id="resourceDesc" placeholder="What services or support does this organization provide?" rows="3" required></textarea>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline prev">← Back</button>
+              <button type="submit" class="btn btn-green">Submit Resource ✓</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container text-center">
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Email: <a href="mailto:communitycompass@gmail.com">communitycompass@gmail.com</a></p>
+              <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+              <p>123 Main Street, Philadelphia</p>
+              <p>Office Hours: Mon–Fri, 9am–5pm</p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <p><a href="resources.html">Resources</a></p>
+              <p><a href="events.html">Events</a></p>
+              <p><a href="submit-resource.html">Submit a Resource</a></p>
+              <p><a href="faq.html">FAQ</a></p>
+              <p><a href="reference.html">References</a></p>
+          </div>
+          <div class="footer-column">
+              <h3>Stay Connected</h3>
+              <p><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+              <p><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></p>
+              <p><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></p>
+              <form class="newsletter-form" onsubmit="handleSubscribe(event, this)">
+                  <label for="sub-email">Subscribe for Updates:</label>
+                  <input type="email" id="sub-email" placeholder="Enter your email" required>
+                  <button type="submit">Subscribe</button>
+                  <span class="sub-confirm" style="display: none; color: white; font-size: 0.9rem;">You're subscribed!</span>
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">Team 2061-902 - Community Compass</div>
+</footer>
+
+<button id="theme-switch" aria-label="Toggle dark mode">
+<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+</button>
+
+<script src="submit-resource.js" defer></script>
+<script src="darkmode.js" defer></script>
+<script src="nav.js" defer></script>
+</body>
+</html>
